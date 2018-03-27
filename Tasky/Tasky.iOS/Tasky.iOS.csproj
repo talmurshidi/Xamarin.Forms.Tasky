@@ -123,6 +123,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Plugin.Multilingual">
+      <Version>1.0.2</Version>
+    </PackageReference>
     <PackageReference Include="PropertyChanged.Fody">
       <Version>2.2.9</Version>
     </PackageReference>
@@ -137,5 +140,8 @@
       <Project>{ED9BFAFF-4676-4575-AB88-5A090BD18F28}</Project>
       <Name>Tasky</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
   </ItemGroup>
 </Project>
