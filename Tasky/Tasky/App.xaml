@@ -1,10 +1,96 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tasky.App">
-	<Application.Resources>
+<Application
+    x:Class="Tasky.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Tasky">
+    <Application.Resources>
 
-		<!-- Application resource dictionary -->
+        <!--  Application resource dictionary  -->
+        <ResourceDictionary>
 
-	</Application.Resources>
+            <Color x:Key="PrimaryColor">
+                #F44336
+            </Color>
+            <Color x:Key="PrimaryDarkColor">
+                #D32F2F
+            </Color>
+            <Color x:Key="PrimaryLightColor">
+                #FFCDD2
+            </Color>
+            <Color x:Key="AccentColor">
+                #03A9F4
+            </Color>
+            <Color x:Key="PrimaryTextColor">
+                #212121
+            </Color>
+            <Color x:Key="TextColor">
+                #FFFFFF
+            </Color>
+            <Color x:Key="SecondaryTextColor">
+                #757575
+            </Color>
+            <Color x:Key="DividerColor">
+                #BDBDBD
+            </Color>
+            <Color x:Key="ContentPageBackgroundColor">
+                #FFFFFF
+            </Color>
+
+            <!--  Micro Font Size  -->
+            <OnPlatform x:Key="MicroFontSize" x:TypeArguments="x:Double">
+                <OnPlatform.iOS>12</OnPlatform.iOS>
+                <OnPlatform.Android>12</OnPlatform.Android>
+            </OnPlatform>
+
+            <!--  Small Font Size  -->
+            <OnPlatform x:Key="SmallFontSize" x:TypeArguments="x:Double">
+                <OnPlatform.iOS>14</OnPlatform.iOS>
+                <OnPlatform.Android>14</OnPlatform.Android>
+            </OnPlatform>
+
+            <!--  Medium Font Size  -->
+            <OnPlatform x:Key="MediumFontSize" x:TypeArguments="x:Double">
+                <OnPlatform.iOS>16</OnPlatform.iOS>
+                <OnPlatform.Android>16</OnPlatform.Android>
+            </OnPlatform>
+
+            <!--  Large Font Size  -->
+            <OnPlatform x:Key="LargeFontSize" x:TypeArguments="x:Double">
+                <OnPlatform.iOS>20</OnPlatform.iOS>
+                <OnPlatform.Android>20</OnPlatform.Android>
+            </OnPlatform>
+
+            <!--  Font Regular  -->
+            <OnPlatform x:Key="FontFamilySource" x:TypeArguments="x:String">
+                <OnPlatform.iOS>Roboto-Regular</OnPlatform.iOS>
+                <OnPlatform.Android>Fonts/Roboto-Regular.ttf#Roboto</OnPlatform.Android>
+            </OnPlatform>
+
+            <!--  NavigationPage Style  -->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="BarTextColor" Value="{StaticResource TextColor}" />
+            </Style>
+
+            <!--  ContentPage Style  -->
+            <Style ApplyToDerivedTypes="true" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{StaticResource ContentPageBackgroundColor}" />
+            </Style>
+
+  
+
+            <!--  Entry Style  -->
+            <Style ApplyToDerivedTypes="true" TargetType="Entry">
+                <Setter Property="FontFamily" Value="{StaticResource FontFamilySource}" />
+            </Style>
+
+            <!--  Button Style  -->
+            <Style ApplyToDerivedTypes="true" TargetType="Button">
+                <Setter Property="FontFamily" Value="{StaticResource FontFamilySource}" />
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
 </Application>

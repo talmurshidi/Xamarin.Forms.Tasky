@@ -5,15 +5,19 @@ using System.Text;
 using Tasky.SQLiteDatabase;
 using Tasky.Helpers;
 using Xamarin.Forms;
+using Tasky.Views.EnView;
+using Xamarin.Forms.Xaml;
 
 namespace Tasky
 {
+    [XamlCompilation( XamlCompilationOptions.Compile )]
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
 
+            MainPage = new NavigationPage( new TaskyListView() );
         }
 
         protected override void OnStart()
