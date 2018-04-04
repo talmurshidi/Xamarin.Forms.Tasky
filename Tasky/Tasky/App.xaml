@@ -78,7 +78,10 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource ContentPageBackgroundColor}" />
             </Style>
 
-  
+            <!--  Label Style  -->
+            <Style ApplyToDerivedTypes="true" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FontFamilySource}" />
+            </Style>
 
             <!--  Entry Style  -->
             <Style ApplyToDerivedTypes="true" TargetType="Entry">
