@@ -9,7 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Tasky.Controlls;
+using Tasky.Controls;
 using Tasky.Droid.RendererAndroid;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;

@@ -1,12 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Tasky.Views.EnView.TaskyListView">
+<ContentPage
+    x:Class="Tasky.Views.EnView.TaskyListView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:Tasky.Controls"
+    xmlns:helper="clr-namespace:Tasky.Helpers"
+    xmlns:local="clr-namespace:Tasky">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="NoTaskStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource LargeFontSize}" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+            <Style x:Key="TaskNameStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+            <Style x:Key="TaskNoteStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource SmallFontSize}" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="TextColor" Value="{StaticResource SecondaryTextColor}" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <control:ListViewControl
+                HasUnevenRows="True"
+                ItemsSource="{Binding TaskyList}"
+                SeparatorVisibility="None">
+                <control:ListViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                Margin="4"
+                                Padding="4"
+                                HasShadow="True"
+                                OutlineColor="{StaticResource AccentColor}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                </Grid>
+                                <StackLayout
+                                    Grid.Column="0"
+                                    Padding="4"
+                                    HorizontalOptions="StartAndExpand"
+                                    Orientation="Vertical"
+                                    Spacing="2"
+                                    VerticalOptions="CenterAndExpand">
+                                    <control:LabelControl Style="{StaticResource TaskNameStyle}" Text="{Binding Name}" />
+                                    <control:LabelControl Style="{StaticResource TaskNoteStyle}" Text="{Binding Notes}" />
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </control:ListViewControl.ItemTemplate>
+            </control:ListViewControl>
+
+            <control:LabelControl
+                IsVisible="{Binding ShowNoDataAvailable}"
+                Style="{StaticResource NoTaskStyle}"
+                Text="{helper:Translate NO_TASK}"
+                TextColor="{StaticResource PrimaryTextColor}" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

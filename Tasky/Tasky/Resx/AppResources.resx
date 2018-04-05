@@ -125,4 +125,12 @@
     <value>Save</value>
     <comment>Save</comment>
   </data>
+  <data name="NO_TASK" xml:space="preserve">
+    <value>Task List is Empty</value>
+    <comment>No task available</comment>
+  </data>
+  <data name="MY_TASK" xml:space="preserve">
+    <value>My Tasks</value>
+    <comment>My tasks</comment>
+  </data>
 </root>

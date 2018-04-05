@@ -97,11 +97,29 @@ namespace Tasky.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My Tasks.
+        /// </summary>
+        public static string MY_TASK {
+            get {
+                return ResourceManager.GetString("MY_TASK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string NAME {
             get {
                 return ResourceManager.GetString("NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task List is Empty.
+        /// </summary>
+        public static string NO_TASK {
+            get {
+                return ResourceManager.GetString("NO_TASK", resourceCulture);
             }
         }
         
