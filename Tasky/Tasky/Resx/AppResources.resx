@@ -133,4 +133,20 @@
     <value>My Tasks</value>
     <comment>My tasks</comment>
   </data>
+  <data name="DELETE_CONFIRM" xml:space="preserve">
+    <value>Delete Confirmation</value>
+    <comment>Delete confirmation</comment>
+  </data>
+  <data name="ARE_YOU_SURE_DELETE" xml:space="preserve">
+    <value>Are you sure to delete this Task?</value>
+    <comment>Are you sure you want delete this task</comment>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+    <comment>OK</comment>
+  </data>
+  <data name="CENCEL" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel</comment>
+  </data>
 </root>

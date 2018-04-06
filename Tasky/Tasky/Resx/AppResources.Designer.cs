@@ -70,11 +70,38 @@ namespace Tasky.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this Task?.
+        /// </summary>
+        public static string ARE_YOU_SURE_DELETE {
+            get {
+                return ResourceManager.GetString("ARE_YOU_SURE_DELETE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string CANCEL {
             get {
                 return ResourceManager.GetString("CANCEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string CENCEL {
+            get {
+                return ResourceManager.GetString("CENCEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Confirmation.
+        /// </summary>
+        public static string DELETE_CONFIRM {
+            get {
+                return ResourceManager.GetString("DELETE_CONFIRM", resourceCulture);
             }
         }
         
@@ -129,6 +156,15 @@ namespace Tasky.Resx {
         public static string NOTES {
             get {
                 return ResourceManager.GetString("NOTES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OK.
+        /// </summary>
+        public static string OK {
+            get {
+                return ResourceManager.GetString("OK", resourceCulture);
             }
         }
         

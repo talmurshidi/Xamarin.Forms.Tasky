@@ -36,36 +36,85 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnToolBarItemRefresh_Clicked" Icon="refresh.png" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <Grid>
             <control:ListViewControl
+                x:Name="MyTaskyList"
                 HasUnevenRows="True"
+                IsPullToRefreshEnabled="True"
+                ItemSelected="OnTask_Selected"
                 ItemsSource="{Binding TaskyList}"
+                Refreshing="OnTaskListRefresh"
                 SeparatorVisibility="None">
                 <control:ListViewControl.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Frame
-                                Margin="4"
-                                Padding="4"
+                                Margin="6"
+                                Padding="6"
                                 HasShadow="True"
                                 OutlineColor="{StaticResource AccentColor}">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="4*" />
+                                        <ColumnDefinition Width="3*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
+
+                                    <StackLayout
+                                        Grid.Column="0"
+                                        Padding="4"
+                                        HorizontalOptions="StartAndExpand"
+                                        Orientation="Vertical"
+                                        Spacing="2"
+                                        VerticalOptions="CenterAndExpand">
+                                        <control:LabelControl Style="{StaticResource TaskNameStyle}" Text="{Binding Name}" />
+                                        <control:LabelControl Style="{StaticResource TaskNoteStyle}" Text="{Binding Notes}" />
+                                    </StackLayout>
+
+                                    <StackLayout
+                                        Grid.Column="1"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Orientation="Horizontal"
+                                        VerticalOptions="CenterAndExpand">
+                                        <Image
+                                            Aspect="AspectFit"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="CenterAndExpand">
+                                            <Image.Triggers>
+                                                <DataTrigger
+                                                    Binding="{Binding IsDone}"
+                                                    TargetType="Image"
+                                                    Value="True">
+                                                    <Setter Property="Source" Value="completed.png" />
+                                                </DataTrigger>
+                                                <DataTrigger
+                                                    Binding="{Binding IsDone}"
+                                                    TargetType="Image"
+                                                    Value="False">
+                                                    <Setter Property="Source" Value="uncompleted.png" />
+                                                </DataTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+
+                                        <Image
+                                            HorizontalOptions="Center"
+                                            Source="delete.png"
+                                            VerticalOptions="CenterAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                    Command="{Binding Source={x:Reference MyTaskyList}, BindingContext.DeleteTaskCommand}"
+                                                    CommandParameter="{Binding ID}"
+                                                    NumberOfTapsRequired="1" />
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </StackLayout>
+
                                 </Grid>
-                                <StackLayout
-                                    Grid.Column="0"
-                                    Padding="4"
-                                    HorizontalOptions="StartAndExpand"
-                                    Orientation="Vertical"
-                                    Spacing="2"
-                                    VerticalOptions="CenterAndExpand">
-                                    <control:LabelControl Style="{StaticResource TaskNameStyle}" Text="{Binding Name}" />
-                                    <control:LabelControl Style="{StaticResource TaskNoteStyle}" Text="{Binding Notes}" />
-                                </StackLayout>
                             </Frame>
                         </ViewCell>
                     </DataTemplate>

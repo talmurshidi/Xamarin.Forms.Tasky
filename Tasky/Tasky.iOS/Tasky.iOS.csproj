@@ -124,6 +124,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Plugin.Multilingual">
       <Version>1.0.2</Version>
     </PackageReference>
@@ -144,5 +147,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <BundleResource Include="Resources\refresh.png" />
+    <BundleResource Include="Resources\refresh%402x.png" />
+    <BundleResource Include="Resources\refresh%403x.png" />
+    <BundleResource Include="Resources\completed.png" />
+    <BundleResource Include="Resources\completed%402x.png" />
+    <BundleResource Include="Resources\completed%403x.png" />
+    <BundleResource Include="Resources\uncompleted.png" />
+    <BundleResource Include="Resources\uncompleted%402x.png" />
+    <BundleResource Include="Resources\uncompleted%403x.png" />
+    <BundleResource Include="Resources\delete.png" />
+    <BundleResource Include="Resources\delete%402x.png" />
+    <BundleResource Include="Resources\delete%403x.png" />
   </ItemGroup>
 </Project>

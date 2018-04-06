@@ -39,20 +39,20 @@
 
             <!--  Micro Font Size  -->
             <OnPlatform x:Key="MicroFontSize" x:TypeArguments="x:Double">
-                <OnPlatform.iOS>12</OnPlatform.iOS>
-                <OnPlatform.Android>12</OnPlatform.Android>
-            </OnPlatform>
-
-            <!--  Small Font Size  -->
-            <OnPlatform x:Key="SmallFontSize" x:TypeArguments="x:Double">
                 <OnPlatform.iOS>14</OnPlatform.iOS>
                 <OnPlatform.Android>14</OnPlatform.Android>
             </OnPlatform>
 
-            <!--  Medium Font Size  -->
-            <OnPlatform x:Key="MediumFontSize" x:TypeArguments="x:Double">
+            <!--  Small Font Size  -->
+            <OnPlatform x:Key="SmallFontSize" x:TypeArguments="x:Double">
                 <OnPlatform.iOS>16</OnPlatform.iOS>
                 <OnPlatform.Android>16</OnPlatform.Android>
+            </OnPlatform>
+
+            <!--  Medium Font Size  -->
+            <OnPlatform x:Key="MediumFontSize" x:TypeArguments="x:Double">
+                <OnPlatform.iOS>18</OnPlatform.iOS>
+                <OnPlatform.Android>18</OnPlatform.Android>
             </OnPlatform>
 
             <!--  Large Font Size  -->
