@@ -28,6 +28,11 @@ namespace Tasky.Views.EnView
             await taskyVM.GetAllTasksAsync();
         }
 
+        async void OnToolBarItemAdd_Clicked( object sender, EventArgs eventArgs )
+        {
+            await Navigation.PushAsync( new ManageTaskyView( taskyVM, new TaskyModel() ) { Title = AppResources.ADD } );
+        }
+
         async void OnTaskListRefresh( object sender, EventArgs eventArgs )
         {
             //MyTaskyList.BeginRefresh();
@@ -35,12 +40,13 @@ namespace Tasky.Views.EnView
             MyTaskyList.EndRefresh();
         }
 
-        void OnTask_Selected( object sender, SelectedItemChangedEventArgs eventArgs )
+        async void OnTask_Selected( object sender, SelectedItemChangedEventArgs eventArgs )
         {
             var item = eventArgs.SelectedItem as TaskyModel;
             if( item != null )
             {
                 MyTaskyList.SelectedItem = null;
+                await Navigation.PushAsync( new ManageTaskyView( taskyVM, item ) { Title = AppResources.EDIT } );
             }
         }
     }

@@ -16,6 +16,7 @@
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
             </Style>
+
             <Style x:Key="TaskNameStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />
                 <Setter Property="HorizontalOptions" Value="StartAndExpand" />
@@ -25,6 +26,7 @@
                 <Setter Property="VerticalTextAlignment" Value="Center" />
                 <Setter Property="LineBreakMode" Value="WordWrap" />
             </Style>
+
             <Style x:Key="TaskNoteStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="{StaticResource SmallFontSize}" />
                 <Setter Property="HorizontalOptions" Value="StartAndExpand" />
@@ -34,11 +36,18 @@
                 <Setter Property="VerticalTextAlignment" Value="Center" />
                 <Setter Property="LineBreakMode" Value="WordWrap" />
             </Style>
+
+            <Style x:Key="ImageStyle" TargetType="Image">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="Aspect" Value="AspectFit" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Clicked="OnToolBarItemRefresh_Clicked" Icon="refresh.png" />
+        <ToolbarItem Clicked="OnToolBarItemAdd_Clicked" Icon="add.png" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
@@ -81,10 +90,7 @@
                                         HorizontalOptions="CenterAndExpand"
                                         Orientation="Horizontal"
                                         VerticalOptions="CenterAndExpand">
-                                        <Image
-                                            Aspect="AspectFit"
-                                            HorizontalOptions="Center"
-                                            VerticalOptions="CenterAndExpand">
+                                        <Image Style="{StaticResource ImageStyle}">
                                             <Image.Triggers>
                                                 <DataTrigger
                                                     Binding="{Binding IsDone}"
@@ -101,10 +107,7 @@
                                             </Image.Triggers>
                                         </Image>
 
-                                        <Image
-                                            HorizontalOptions="Center"
-                                            Source="delete.png"
-                                            VerticalOptions="CenterAndExpand">
+                                        <Image Source="delete.png" Style="{StaticResource ImageStyle}">
                                             <Image.GestureRecognizers>
                                                 <TapGestureRecognizer
                                                     Command="{Binding Source={x:Reference MyTaskyList}, BindingContext.DeleteTaskCommand}"

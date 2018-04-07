@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tasky.Views.EnView.ManageTaskyView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:Tasky.Controls"
+    xmlns:helper="clr-namespace:Tasky.Helpers"
+    xmlns:local="clr-namespace:Tasky">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />
+                <Setter Property="PlaceholderColor" Value="{StaticResource SecondaryTextColor}" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}" />
+                <Setter Property="Margin" Value="0,4" />
+            </Style>
+
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BorderRadius" Value="8" />
+                <Setter Property="FontSize" Value="{StaticResource SmallFontSize}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="Margin" Value="0,4" />
+            </Style>
+
+            <Style x:Key="DoneLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource MediumFontSize}" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Margin="4,0"
+                HorizontalOptions="FillAndExpand"
+                Spacing="2"
+                VerticalOptions="StartAndExpand">
+                <control:EntryControl
+                    Placeholder="{helper:Translate NAME}"
+                    Style="{StaticResource EntryStyle}"
+                    Text="{Binding Name}" />
+                <control:EntryControl
+                    Placeholder="{helper:Translate NOTES}"
+                    Style="{StaticResource EntryStyle}"
+                    Text="{Binding Notes}" />
+
+                <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                    <control:LabelControl Style="{StaticResource DoneLabelStyle}" Text="{helper:Translate DONE}" />
+                    <Switch IsToggled="{Binding IsDone}" />
+                </StackLayout>
+
+
+                <BoxView
+                    BackgroundColor="{StaticResource DividerColor}"
+                    HeightRequest="2"
+                    HorizontalOptions="FillAndExpand" />
+
+                <Grid Margin="0,4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Column="1">
+                        <control:ButtonControl
+                            Clicked="OnButton_Clicked"
+                            Style="{StaticResource ButtonStyle}"
+                            Text="{helper:Translate SAVE}" />
+
+                        <control:ButtonControl
+                            Clicked="OnButton_Clicked"
+                            Style="{StaticResource ButtonStyle}"
+                            Text="{helper:Translate DELETE}" />
+
+                        <control:ButtonControl
+                            Clicked="OnButton_Clicked"
+                            Style="{StaticResource ButtonStyle}"
+                            Text="{helper:Translate CENCEL}" />
+                    </StackLayout>
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

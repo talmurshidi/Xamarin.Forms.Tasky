@@ -97,6 +97,15 @@ namespace Tasky.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string DELETE {
+            get {
+                return ResourceManager.GetString("DELETE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete Confirmation.
         /// </summary>
         public static string DELETE_CONFIRM {

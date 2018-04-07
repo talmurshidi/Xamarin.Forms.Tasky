@@ -72,6 +72,7 @@
     <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="RendererAndroid\ButtonAndroid.cs" />
+    <Compile Include="RendererAndroid\EntryAndroid.cs" />
     <Compile Include="RendererAndroid\LabelAndroid.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,6 +126,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\delete.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\delete.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\delete.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\add.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\add.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\add.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\add.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

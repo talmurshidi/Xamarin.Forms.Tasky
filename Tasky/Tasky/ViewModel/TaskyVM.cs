@@ -28,25 +28,24 @@ namespace Tasky.ViewModel
             TaskyList.Clear();
             TaskyListTemp = await App.Database.GetItemsAsync();
             ListToOC();
-            TaskyList.Add( new TaskyModel { IsDone = false, Name = "Task1", Notes = "Notes", ID = 1 } );
-            TaskyList.Add( new TaskyModel { IsDone = true, Name = "Task2", Notes = "Notes", ID = 2 } );
-            TaskyList.Add( new TaskyModel { IsDone = false, Name = "Task3", Notes = "Notes", ID = 3 } );
-            if( TaskyList.Count == 0 )
-            {
-                ShowNoDataAvailable = true;
-            }
-            else
-            {
-                ShowNoDataAvailable = false;
-            }
+            ChechDataAvailable();
         }
 
         public async Task UpdateTaskAsync( TaskyModel taskyModel )
         {
             if( taskyModel.ID == 0 )
             {
-                await App.Database.InsertItemAsync( taskyModel );
-                TaskyList.Add( taskyModel );
+                int IsInserted = await App.Database.InsertItemAsync( taskyModel );
+                if( IsInserted == 1 )
+                {
+                    UserDialogs.Instance.Toast( "Saved Successfully", TimeSpan.FromSeconds( 3 ) );
+                    TaskyList.Add( taskyModel );
+                }
+                else
+                {
+                    UserDialogs.Instance.Toast( "Saved Failed", TimeSpan.FromSeconds( 3 ) );
+                }
+                ChechDataAvailable();
             }
             else
             {
@@ -60,6 +59,7 @@ namespace Tasky.ViewModel
             if( confirmation )
             {
                 int isDeleted = await App.Database.DeleteItemAsync( taskyModel );
+
                 if( isDeleted == 1 )
                 {
                     TaskyList.Remove( taskyModel );
@@ -69,6 +69,7 @@ namespace Tasky.ViewModel
                 {
                     UserDialogs.Instance.Toast( "Deleted Failed", TimeSpan.FromSeconds( 3 ) );
                 }
+                ChechDataAvailable();
             }
         }
 
@@ -78,13 +79,28 @@ namespace Tasky.ViewModel
             {
                 return new Command( async val =>
                 {
-                    var item = TaskyList.Where( i => i.ID == (int)val ).FirstOrDefault();
-                    await DeleteTaskAsync( item );
+                    bool confirmation = await DeleteConfirmationMessage();
+                    if( confirmation )
+                    {
+                        var item = TaskyList.Where( i => i.ID == (int)val ).FirstOrDefault();
+                        int isDeleted = await App.Database.DeleteItemAsync( item );
+
+                        if( isDeleted == 1 )
+                        {
+                            TaskyList.Remove( item );
+                            UserDialogs.Instance.Toast( "Deleted Successfully", TimeSpan.FromSeconds( 3 ) );
+                        }
+                        else
+                        {
+                            UserDialogs.Instance.Toast( "Deleted Failed", TimeSpan.FromSeconds( 3 ) );
+                        }
+                        ChechDataAvailable();
+                    }
                 } );
             }
         }
 
-        private async Task<bool> DeleteConfirmationMessage()
+        public async Task<bool> DeleteConfirmationMessage()
         {
             return await App.Current.MainPage.DisplayAlert( AppResources.DELETE_CONFIRM, AppResources.ARE_YOU_SURE_DELETE, AppResources.OK, AppResources.CANCEL );
         }
@@ -93,6 +109,18 @@ namespace Tasky.ViewModel
             foreach( var item in TaskyListTemp )
             {
                 TaskyList.Add( item );
+            }
+        }
+
+        private void ChechDataAvailable()
+        {
+            if( TaskyList.Count == 0 )
+            {
+                ShowNoDataAvailable = true;
+            }
+            else
+            {
+                ShowNoDataAvailable = false;
             }
         }
         public bool ShowNoDataAvailable { get; set; } = false;

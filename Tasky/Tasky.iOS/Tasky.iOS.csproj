@@ -159,5 +159,8 @@
     <BundleResource Include="Resources\delete.png" />
     <BundleResource Include="Resources\delete%402x.png" />
     <BundleResource Include="Resources\delete%403x.png" />
+    <BundleResource Include="Resources\add.png" />
+    <BundleResource Include="Resources\add%402x.png" />
+    <BundleResource Include="Resources\add%403x.png" />
   </ItemGroup>
 </Project>
