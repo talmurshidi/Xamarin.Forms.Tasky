@@ -1246,44 +1246,44 @@ namespace Tasky.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0c004a
-			public const int abc_background_cache_hint_selector_material_dark = 2131492938;
-			
 			// aapt resource value: 0x7f0c004b
-			public const int abc_background_cache_hint_selector_material_light = 2131492939;
+			public const int abc_background_cache_hint_selector_material_dark = 2131492939;
 			
 			// aapt resource value: 0x7f0c004c
-			public const int abc_btn_colored_borderless_text_material = 2131492940;
+			public const int abc_background_cache_hint_selector_material_light = 2131492940;
 			
 			// aapt resource value: 0x7f0c004d
-			public const int abc_btn_colored_text_material = 2131492941;
+			public const int abc_btn_colored_borderless_text_material = 2131492941;
 			
 			// aapt resource value: 0x7f0c004e
-			public const int abc_color_highlight_material = 2131492942;
+			public const int abc_btn_colored_text_material = 2131492942;
 			
 			// aapt resource value: 0x7f0c004f
-			public const int abc_hint_foreground_material_dark = 2131492943;
+			public const int abc_color_highlight_material = 2131492943;
 			
 			// aapt resource value: 0x7f0c0050
-			public const int abc_hint_foreground_material_light = 2131492944;
+			public const int abc_hint_foreground_material_dark = 2131492944;
+			
+			// aapt resource value: 0x7f0c0051
+			public const int abc_hint_foreground_material_light = 2131492945;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int abc_input_method_navigation_guard = 2131492869;
 			
-			// aapt resource value: 0x7f0c0051
-			public const int abc_primary_text_disable_only_material_dark = 2131492945;
-			
 			// aapt resource value: 0x7f0c0052
-			public const int abc_primary_text_disable_only_material_light = 2131492946;
+			public const int abc_primary_text_disable_only_material_dark = 2131492946;
 			
 			// aapt resource value: 0x7f0c0053
-			public const int abc_primary_text_material_dark = 2131492947;
+			public const int abc_primary_text_disable_only_material_light = 2131492947;
 			
 			// aapt resource value: 0x7f0c0054
-			public const int abc_primary_text_material_light = 2131492948;
+			public const int abc_primary_text_material_dark = 2131492948;
 			
 			// aapt resource value: 0x7f0c0055
-			public const int abc_search_url_text = 2131492949;
+			public const int abc_primary_text_material_light = 2131492949;
+			
+			// aapt resource value: 0x7f0c0056
+			public const int abc_search_url_text = 2131492950;
 			
 			// aapt resource value: 0x7f0c0006
 			public const int abc_search_url_text_normal = 2131492870;
@@ -1294,32 +1294,32 @@ namespace Tasky.Droid
 			// aapt resource value: 0x7f0c0008
 			public const int abc_search_url_text_selected = 2131492872;
 			
-			// aapt resource value: 0x7f0c0056
-			public const int abc_secondary_text_material_dark = 2131492950;
-			
 			// aapt resource value: 0x7f0c0057
-			public const int abc_secondary_text_material_light = 2131492951;
+			public const int abc_secondary_text_material_dark = 2131492951;
 			
 			// aapt resource value: 0x7f0c0058
-			public const int abc_tint_btn_checkable = 2131492952;
+			public const int abc_secondary_text_material_light = 2131492952;
 			
 			// aapt resource value: 0x7f0c0059
-			public const int abc_tint_default = 2131492953;
+			public const int abc_tint_btn_checkable = 2131492953;
 			
 			// aapt resource value: 0x7f0c005a
-			public const int abc_tint_edittext = 2131492954;
+			public const int abc_tint_default = 2131492954;
 			
 			// aapt resource value: 0x7f0c005b
-			public const int abc_tint_seek_thumb = 2131492955;
+			public const int abc_tint_edittext = 2131492955;
 			
 			// aapt resource value: 0x7f0c005c
-			public const int abc_tint_spinner = 2131492956;
+			public const int abc_tint_seek_thumb = 2131492956;
 			
 			// aapt resource value: 0x7f0c005d
-			public const int abc_tint_switch_thumb = 2131492957;
+			public const int abc_tint_spinner = 2131492957;
 			
 			// aapt resource value: 0x7f0c005e
-			public const int abc_tint_switch_track = 2131492958;
+			public const int abc_tint_switch_thumb = 2131492958;
+			
+			// aapt resource value: 0x7f0c005f
+			public const int abc_tint_switch_track = 2131492959;
 			
 			// aapt resource value: 0x7f0c0009
 			public const int accent_material_dark = 2131492873;
@@ -1378,8 +1378,8 @@ namespace Tasky.Droid
 			// aapt resource value: 0x7f0c003f
 			public const int design_bottom_navigation_shadow_color = 2131492927;
 			
-			// aapt resource value: 0x7f0c005f
-			public const int design_error = 2131492959;
+			// aapt resource value: 0x7f0c0060
+			public const int design_error = 2131492960;
 			
 			// aapt resource value: 0x7f0c0040
 			public const int design_fab_shadow_end_color = 2131492928;
@@ -1411,8 +1411,8 @@ namespace Tasky.Droid
 			// aapt resource value: 0x7f0c0049
 			public const int design_textinput_error_color_light = 2131492937;
 			
-			// aapt resource value: 0x7f0c0060
-			public const int design_tint_password_toggle = 2131492960;
+			// aapt resource value: 0x7f0c0061
+			public const int design_tint_password_toggle = 2131492961;
 			
 			// aapt resource value: 0x7f0c0017
 			public const int dim_foreground_disabled_material_dark = 2131492887;
@@ -1525,17 +1525,20 @@ namespace Tasky.Droid
 			// aapt resource value: 0x7f0c003a
 			public const int secondary_text_disabled_material_light = 2131492922;
 			
+			// aapt resource value: 0x7f0c004a
+			public const int splash_background = 2131492938;
+			
 			// aapt resource value: 0x7f0c003b
 			public const int switch_thumb_disabled_material_dark = 2131492923;
 			
 			// aapt resource value: 0x7f0c003c
 			public const int switch_thumb_disabled_material_light = 2131492924;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int switch_thumb_material_dark = 2131492961;
-			
 			// aapt resource value: 0x7f0c0062
-			public const int switch_thumb_material_light = 2131492962;
+			public const int switch_thumb_material_dark = 2131492962;
+			
+			// aapt resource value: 0x7f0c0063
+			public const int switch_thumb_material_light = 2131492963;
 			
 			// aapt resource value: 0x7f0c003d
 			public const int switch_thumb_normal_material_dark = 2131492925;
@@ -2268,26 +2271,26 @@ namespace Tasky.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020117
-			public const int avd_hide_password_1 = 2130837783;
-			
-			// aapt resource value: 0x7f020118
-			public const int avd_hide_password_2 = 2130837784;
-			
 			// aapt resource value: 0x7f020119
-			public const int avd_hide_password_3 = 2130837785;
+			public const int avd_hide_password_1 = 2130837785;
+			
+			// aapt resource value: 0x7f02011a
+			public const int avd_hide_password_2 = 2130837786;
+			
+			// aapt resource value: 0x7f02011b
+			public const int avd_hide_password_3 = 2130837787;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02011a
-			public const int avd_show_password_1 = 2130837786;
-			
-			// aapt resource value: 0x7f02011b
-			public const int avd_show_password_2 = 2130837787;
-			
 			// aapt resource value: 0x7f02011c
-			public const int avd_show_password_3 = 2130837788;
+			public const int avd_show_password_1 = 2130837788;
+			
+			// aapt resource value: 0x7f02011d
+			public const int avd_show_password_2 = 2130837789;
+			
+			// aapt resource value: 0x7f02011e
+			public const int avd_show_password_3 = 2130837790;
 			
 			// aapt resource value: 0x7f020056
 			public const int completed = 2130837590;
@@ -2844,11 +2847,11 @@ namespace Tasky.Droid
 			// aapt resource value: 0x7f02010e
 			public const int notification_icon_background = 2130837774;
 			
-			// aapt resource value: 0x7f020115
-			public const int notification_template_icon_bg = 2130837781;
+			// aapt resource value: 0x7f020117
+			public const int notification_template_icon_bg = 2130837783;
 			
-			// aapt resource value: 0x7f020116
-			public const int notification_template_icon_low_bg = 2130837782;
+			// aapt resource value: 0x7f020118
+			public const int notification_template_icon_low_bg = 2130837784;
 			
 			// aapt resource value: 0x7f02010f
 			public const int notification_tile_bg = 2130837775;
@@ -2866,7 +2869,13 @@ namespace Tasky.Droid
 			public const int roundedbgdark = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int uncompleted = 2130837780;
+			public const int splash = 2130837780;
+			
+			// aapt resource value: 0x7f020115
+			public const int splash_screen = 2130837781;
+			
+			// aapt resource value: 0x7f020116
+			public const int uncompleted = 2130837782;
 			
 			static Drawable()
 			{
@@ -4529,6 +4538,9 @@ namespace Tasky.Droid
 			
 			// aapt resource value: 0x7f0b004d
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131427405;
+			
+			// aapt resource value: 0x7f0b018c
+			public const int Splash = 2131427724;
 			
 			// aapt resource value: 0x7f0b00dd
 			public const int TextAppearance_AppCompat = 2131427549;

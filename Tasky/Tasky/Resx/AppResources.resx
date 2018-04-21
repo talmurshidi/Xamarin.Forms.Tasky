@@ -153,4 +153,28 @@
     <value>Delete</value>
     <comment>Delete</comment>
   </data>
+  <data name="Saved_Successfully" xml:space="preserve">
+    <value>Saved Successfully</value>
+    <comment>Saved Successfully</comment>
+  </data>
+  <data name="Saved_Failed" xml:space="preserve">
+    <value>Saved Failed</value>
+    <comment>Saved Failed</comment>
+  </data>
+  <data name="Updated_Successfully" xml:space="preserve">
+    <value>Updated Successfully</value>
+    <comment>Updated Successfully</comment>
+  </data>
+  <data name="Updated_Failed" xml:space="preserve">
+    <value>Updated Failed</value>
+    <comment>Updated Failed</comment>
+  </data>
+  <data name="Deleted_Successfully" xml:space="preserve">
+    <value>Deleted Successfully</value>
+    <comment>Deleted Successfully</comment>
+  </data>
+  <data name="Deleted_Failed" xml:space="preserve">
+    <value>Deleted Failed</value>
+    <comment>Deleted Failed</comment>
+  </data>
 </root>

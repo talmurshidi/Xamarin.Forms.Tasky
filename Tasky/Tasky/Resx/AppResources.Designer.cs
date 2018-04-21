@@ -115,6 +115,24 @@ namespace Tasky.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deleted Failed.
+        /// </summary>
+        public static string Deleted_Failed {
+            get {
+                return ResourceManager.GetString("Deleted_Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deleted Successfully.
+        /// </summary>
+        public static string Deleted_Successfully {
+            get {
+                return ResourceManager.GetString("Deleted_Successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Done.
         /// </summary>
         public static string DONE {
@@ -183,6 +201,42 @@ namespace Tasky.Resx {
         public static string SAVE {
             get {
                 return ResourceManager.GetString("SAVE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saved Failed.
+        /// </summary>
+        public static string Saved_Failed {
+            get {
+                return ResourceManager.GetString("Saved_Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saved Successfully.
+        /// </summary>
+        public static string Saved_Successfully {
+            get {
+                return ResourceManager.GetString("Saved_Successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updated Failed.
+        /// </summary>
+        public static string Updated_Failed {
+            get {
+                return ResourceManager.GetString("Updated_Failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updated Successfully.
+        /// </summary>
+        public static string Updated_Successfully {
+            get {
+                return ResourceManager.GetString("Updated_Successfully", resourceCulture);
             }
         }
     }

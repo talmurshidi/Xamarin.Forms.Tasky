@@ -7,7 +7,7 @@ namespace Tasky.Constants
 {
     public class Constants
     {
-        public static Color PRIMARY_COLOR = (Color)App.Current.Resources["PrimaryColor"];
+        public static Color PRIMARY_COLOR = App.Current.Resources.ContainsKey( "PrimaryColor" ) ? (Color)App.Current.Resources["PrimaryColor"] : Color.DarkBlue;
         public static Color PRIMARY_DARK_COLOR = (Color)App.Current.Resources["PrimaryDarkColor"];
         public static Color PRIMARY_LIGHT_COLOR = (Color)App.Current.Resources["PrimaryLightColor"];
         public static Color ACCENT_COLOR = (Color)App.Current.Resources["AccentColor"];
@@ -17,9 +17,9 @@ namespace Tasky.Constants
         public static Color DIVIDER_COLOR = (Color)App.Current.Resources["DividerColor"];
         public static Color CONTENT_PAGE_BACKGROUND_COLOR = (Color)App.Current.Resources["ContentPageBackgroundColor"];
 
-        public const double LARGE_FONET_SIZE = 18;
-        public const double MEDIUM_FONT_SIZE = 16;
-        public const double SMALL_FONT_SIZE = 14;
-        public const double MICRO_FONT_SIZE = 12;
+        public static double LARGE_FONET_SIZE = (double)App.Current.Resources["LargeFontSize"];
+        public static double MEDIUM_FONT_SIZE = (double)App.Current.Resources["MediumFontSize"];
+        public static double SMALL_FONT_SIZE = (double)App.Current.Resources["SmallFontSize"];
+        public static double MICRO_FONT_SIZE = (double)App.Current.Resources["MicroFontSize"];
     }
 }

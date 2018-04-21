@@ -76,6 +76,7 @@
     <Compile Include="RendererAndroid\LabelAndroid.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Fonts\Roboto-Regular.ttf" />
@@ -131,6 +132,21 @@
     <AndroidResource Include="Resources\drawable-xhdpi\add.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\add.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\add.png" />
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

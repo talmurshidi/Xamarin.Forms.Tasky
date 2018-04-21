@@ -38,18 +38,26 @@ namespace Tasky.ViewModel
                 int IsInserted = await App.Database.InsertItemAsync( taskyModel );
                 if( IsInserted == 1 )
                 {
-                    UserDialogs.Instance.Toast( "Saved Successfully", TimeSpan.FromSeconds( 3 ) );
+                    UserDialogs.Instance.Toast( AppResources.Saved_Successfully, TimeSpan.FromSeconds( 3 ) );
                     TaskyList.Add( taskyModel );
                 }
                 else
                 {
-                    UserDialogs.Instance.Toast( "Saved Failed", TimeSpan.FromSeconds( 3 ) );
+                    UserDialogs.Instance.Toast( AppResources.Saved_Failed, TimeSpan.FromSeconds( 3 ) );
                 }
                 ChechDataAvailable();
             }
             else
             {
-                await App.Database.UpdateItemAsync( taskyModel );
+                int IsInserted = await App.Database.UpdateItemAsync( taskyModel );
+                if( IsInserted == 1 )
+                {
+                    UserDialogs.Instance.Toast( AppResources.Updated_Successfully, TimeSpan.FromSeconds( 3 ) );
+                }
+                else
+                {
+                    UserDialogs.Instance.Toast( AppResources.Updated_Failed, TimeSpan.FromSeconds( 3 ) );
+                }
             }
         }
 
@@ -63,11 +71,11 @@ namespace Tasky.ViewModel
                 if( isDeleted == 1 )
                 {
                     TaskyList.Remove( taskyModel );
-                    UserDialogs.Instance.Toast( "Deleted Successfully", TimeSpan.FromSeconds( 3 ) );
+                    UserDialogs.Instance.Toast( AppResources.Deleted_Successfully, TimeSpan.FromSeconds( 3 ) );
                 }
                 else
                 {
-                    UserDialogs.Instance.Toast( "Deleted Failed", TimeSpan.FromSeconds( 3 ) );
+                    UserDialogs.Instance.Toast( AppResources.Deleted_Failed, TimeSpan.FromSeconds( 3 ) );
                 }
                 ChechDataAvailable();
             }
@@ -88,11 +96,11 @@ namespace Tasky.ViewModel
                         if( isDeleted == 1 )
                         {
                             TaskyList.Remove( item );
-                            UserDialogs.Instance.Toast( "Deleted Successfully", TimeSpan.FromSeconds( 3 ) );
+                            UserDialogs.Instance.Toast( AppResources.Deleted_Successfully, TimeSpan.FromSeconds( 3 ) );
                         }
                         else
                         {
-                            UserDialogs.Instance.Toast( "Deleted Failed", TimeSpan.FromSeconds( 3 ) );
+                            UserDialogs.Instance.Toast( AppResources.Deleted_Failed, TimeSpan.FromSeconds( 3 ) );
                         }
                         ChechDataAvailable();
                     }
