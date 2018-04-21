@@ -6,6 +6,9 @@ using System.Text;
 
 namespace Tasky.Models
 {
+    /*
+     * Author: Tamer H. Almurshidi
+     */
     public class TaskyModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

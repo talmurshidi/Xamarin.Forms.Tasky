@@ -13,6 +13,9 @@ using Xamarin.Forms;
 
 namespace Tasky.ViewModel
 {
+    /*
+     * Author: Tamer H. Almurshidi
+     */
     public class TaskyVM : INotifyPropertyChanged
     {
         public ObservableCollection<TaskyModel> TaskyList { get; set; }

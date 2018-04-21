@@ -9,6 +9,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Tasky.Helpers
 {
+    /*
+     * Author: Tamer H. Almurshidi
+     */
     [ContentProperty( "Text" )]
     public class Translate : IMarkupExtension
     {
@@ -35,7 +38,7 @@ namespace Tasky.Helpers
 
                     "Text" );
 #else
-				translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
+                translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
 #endif
             }
             return translation;

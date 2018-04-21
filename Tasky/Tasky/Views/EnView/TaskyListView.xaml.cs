@@ -12,6 +12,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Tasky.Views.EnView
 {
+    /*
+     * Author: Tamer H. Almurshidi
+     */
     [XamlCompilation( XamlCompilationOptions.Compile )]
     public partial class TaskyListView : ContentPage
     {

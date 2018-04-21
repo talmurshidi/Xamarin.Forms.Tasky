@@ -5,6 +5,9 @@ using Xamarin.Forms;
 
 namespace Tasky.Controls
 {
+    /*
+     * Author: Tamer H. Almurshidi
+     */
     public class ButtonControl : Button
     {
     }

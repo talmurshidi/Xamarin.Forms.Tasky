@@ -10,6 +10,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Tasky
 {
+    /*
+     * Author: Tamer H. Almurshidi
+     */
     [XamlCompilation( XamlCompilationOptions.Compile )]
     public partial class App : Application
     {

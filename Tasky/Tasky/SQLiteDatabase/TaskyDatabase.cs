@@ -7,6 +7,9 @@ using Tasky.Models;
 
 namespace Tasky.SQLiteDatabase
 {
+    /*
+     * Author: Tamer H. Almurshidi
+     */
     public class TaskyDatabase
     {
         readonly SQLiteAsyncConnection database;
